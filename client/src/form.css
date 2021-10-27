@@ -1,0 +1,6 @@
+.formContainer {
+    border: 1px solid #bbb; 
+    padding: 2% !important; 
+    border-radius: 5px; 
+    box-shadow: 3px 3px 2px #ccc;
+}

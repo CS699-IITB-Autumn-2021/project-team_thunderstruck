@@ -1,5 +1,6 @@
 import './App.css';
 
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,29 +11,25 @@ import {
 import Admin from './components/Admin/Admin';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
+import Signup from './components/Signup/Signup';
+import StudentAdv from './components/StudentAdv/StudentAdv';
+import Circular from './components/Circular/Circular';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import CampusAdv from './components/CampusAdv/CampusAdv';
+
+
 
 
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/admin-panel">Admin Panel</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+      <Container fluid>
         <Switch>
           <Route path="/admin-panel">
             <Admin />
@@ -40,11 +37,23 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
+          <Route path="/studentadv">
+            <StudentAdv />
+          </Route>
+          <Route path="/campusadv">
+            <CampusAdv />
+          </Route>
+          <Route path="/circular">
+            <Circular />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
-      </div>
+      </Container>
     </Router>
   );
 }
