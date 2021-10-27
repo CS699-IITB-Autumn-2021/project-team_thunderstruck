@@ -20,11 +20,11 @@ f) general comodity usage pc that can host a web server, Python, Node js, React 
 
 g) how to operate
 
-git clone https://github.com/CS699-IITB-Autumn-2021/project-team_thunderstruck.git
-cd project-team_thunderstruck
-// setting up the server
-Install nodejs, npm, postgres, python
-Install python packages
+- `git clone https://github.com/CS699-IITB-Autumn-2021/project-team_thunderstruck.git`
+- `cd project-team_thunderstruck`
+// setting up the server 
+- Install nodejs, npm, postgres, python
+- Install the following python packages using pip: json, numpy, pandas, chart_studio, plotly-express, bs4
 {
 to install node js see below links :
 for windows: https://nodejs.org/dist/v16.13.0/node-v16.13.0-x64.msi
@@ -39,17 +39,35 @@ for windows: https://www.postgresql.org/download/windows/
 for linux: https://www.postgresql.org/download/linux/
 for mac: https://www.postgresql.org/download/macosx/
 }
-then from the directory where git is cloned run following commands
-cd server
-npm install
-node app
-// server running on port 8080
-// runing the client
-cd ../client
-npm install
-npm start
-// client is now running at port 3000
-// go to http://localhost:3000 to open up the client home page
+
+Then from the directory where git is cloned run following commands
+Setup the database:
+- Use the username password created while installing postgres and paste it in db.js in appropriate fields.
+- Open psql in your command line: <br>
+  `psql`
+- Create the coviddash database: <br>
+  `CREATE DATABASE coviddash;`
+- Use the coviddash database: <br>`\c coviddash username` 
+- Run commands from file: <br>
+`\i server/sql_commands/database.sql` <br>
+`\i server/sql_commands/insert_data.sql`
+- Now our database is ready!
+- See the tables that have been created: <br>`\dt` 
+- Get out of psql <br>`\q` 
+
+- Firing up the Server!<br>
+`cd server` <br>
+`npm install`<br>
+`node app`<br>
+Server running on port 8080
+ 
+- Starting the client! Open a new terminal <br>
+`cd ../client` <br>
+`npm install`<br>
+`npm start`<br>
+
+Client is now running at port 3000
+Go to http://localhost:3000 to open up the client home page
 
 h)Primary stakeholders of the product/service built: any organization with a campus, which has residents or workers. eg: IT giants , schools, universities etc
 
