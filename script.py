@@ -2,6 +2,7 @@ import json
 import numpy as np
 import pandas as pd
 #https://www.youtube.com/watch?v=kxPZV9ileKI&t=478s
+#https://plotly.com/python/getting-started-with-chart-studio/
 import chart_studio
 
 import chart_studio.plotly as py
@@ -41,5 +42,5 @@ fig = px.choropleth_mapbox(
     #color_continuous_scale=px.colors.diverging.BrBG,
     #color_continuous_midpoint=5,
 )
-
+#https://plotly.com/python/getting-started/
 py.plot(fig, filename= 'project_heat_map',auto_open=False)
