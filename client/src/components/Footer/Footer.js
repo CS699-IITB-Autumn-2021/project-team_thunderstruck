@@ -2,10 +2,16 @@ import React from 'react'
 import '../../form.css';
 
 import Button from 'react-bootstrap/Button';
+/* https://react-bootstrap.github.io/components/navbar/ */
 import Navbar from 'react-bootstrap/Navbar';
+
+/* Reference for fluid container https://react-bootstrap.github.io/layout/grid/ */
+
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+/*https://react-bootstrap.github.io/components/forms/*/
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 

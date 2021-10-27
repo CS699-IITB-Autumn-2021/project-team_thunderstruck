@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../form.css';
 
 
 import Container from 'react-bootstrap/Container';
@@ -10,40 +9,38 @@ import Table from 'react-bootstrap/Table';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-
-
 export default function CampusAdv() {
     return (
+       /* https://react-bootstrap.github.io/layout/grid/ */
         <Container fluid>
             <Row>
                 <Header />
             </Row>
 
-            <Row style={{"margin-top": "100px", "margin-bottom": "100px"}}>
+            <Row style={{"margin-top": "100px"}}>
                 <Container fluid>
-                <Row  style={{"margin-left": "5%", "margin-right": "5%"}}>
-                    <h3>Campus Covid Advisory</h3>
-                    <p>Several restrictions have been put on entry/exit from the IIT Campus to minimize entry/exits that could result in covid infection spread, while ensuring essential activities are not disrupted. Details of what is not permitted/permitted with approval/permitted without approval, are provided below.</p>
-                </Row>
-                <Row  style={{"margin": "5%"}}>
+                <Row>
                 <Accordion defaultActiveKey="0">
   <Accordion.Item eventKey="0">
-  <Accordion.Header>Introduction</Accordion.Header>
+  <Accordion.Header>Several restrictions have been put on entry/exit from the IIT Campus to minimize entry/exits that could result in covid infection spread, while ensuring essential activities are not disrupted. Details of what is not permitted/permitted with approval/permitted without approval, are provided below:</Accordion.Header>
     <Accordion.Body>
     <p>
     The institute and student functionaries are seeking to minimise the damage caused to academics and careers of registered students of IIT Bombay due to Covid-19. This page has all that you need to know about the current situation on the campus.
     <ol>
         <li>
-        Entry into IIT
+        Entry into IIT: Section 1
         </li>
         <li>
-        Exit from IIT
+        Exit from IIT: Section 2
         </li>
         <li>
-        Entry of delivery/supply vehicles
+        Entry of delivery/supply vehicles: Section 3
         </li>
         <li>
-        Quarantine/Home Isolation policies  
+        Quarantine/Home Isolation policies: Section 4
+        </li>
+        <li>
+        Household Help policies: Section 5
         </li>
      </ol>
 
@@ -52,7 +49,7 @@ export default function CampusAdv() {
     </Accordion.Body>
   </Accordion.Item>
   <Accordion.Item eventKey="1">
-  <Accordion.Header>Entry into IIT</Accordion.Header>
+  <Accordion.Header>Documents and permissions required are listed below for each category:</Accordion.Header>
     <Accordion.Body>
     <p>
     All IIT Staff/Faculty and their family members residing in IITB
@@ -149,32 +146,32 @@ export default function CampusAdv() {
   </Accordion>
 </Row>
 
-                <Row  style={{"margin": "5%"}}>
-                <Table bordered>
+                <Row>
+                {/* https://react-bootstrap.github.io/components/table/  */}
+                <Table striped bordered hover>
                     <thead>
                         <tr>
-                        <th>Detailed Documents</th>
+                        <th>Document</th>
                         <th>Link</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style={{"background-color": "#F5D081"}}>
+                        <tr>
                             <td>Several restrictions have been put on entry/exit from the IIT Campus to minimize entry/exits that could result in covid infection spread, while ensuring essential activities are not disrupted. Details of what is not permitted/permitted with approval/permitted without approval, are provided below:</td>
                             <td><a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here</a></td>
                         </tr>
-                        <tr style={{"background-color": "#FBBDBD"}}>
+                        <tr>
                             <td>Documents and permissions required are listed below for each category:</td>
                             <td><a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here</a></td>
                         </tr>
-                        <tr style={{"background-color": "#F5D081"}}>
+                        <tr>
                             <td>Exit From IIT</td>
                             <td><a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here</a></td>
-                        </tr>
-                        <tr style={{"background-color": "#FBBDBD"}}>
+                        </tr><tr>
                             <td>Entry Policy for Delivery/Supply Vehicles</td>
                             <td><a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here</a></td>
                         </tr>
-                        <tr style={{"background-color": "#F5D081"}}>
+                        <tr>
                             <td>Quaratine rules:</td>
                             <td><a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here</a></td>
                         </tr>

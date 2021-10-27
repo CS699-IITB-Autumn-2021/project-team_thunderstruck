@@ -19,13 +19,16 @@ function Signup(props) {
 
     const baseURL = "http://localhost:8080";
     const [name, setName] = useState("");
+    const [adminID, setAdminID] = useState(-1);
     const [password, setPassword] = useState("");
     const [password2, setPassword2] = useState("");
     const [pwError, setPwerror] = useState(false);
+    const [isCreated, setIsCreated] = useState(false);
     const [email, setEmail] = useState("");
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
+        setIsCreated(false);
 
         if (password !== password2) {
             setPwerror(true);
@@ -39,9 +42,12 @@ function Signup(props) {
             })
             .then((response) => {
               console.log(response.data);
+              setAdminID(response.data.admin_id);
               setPassword("");
+              setPassword2("");
               setName("");
               setEmail("");
+              setIsCreated(true);
             });
         }
 
@@ -89,6 +95,9 @@ function Signup(props) {
                     <Col md={4} sm={8} xs={12}>
                         <Alert variant="danger" style ={{display: pwError ? "block" : "none"}} >
                             Passwords do not match!
+                        </Alert>
+                        <Alert variant="success" style ={{display: isCreated ? "block" : "none"}} >
+                            Admin account created successfully! Your Admin ID is {adminID}!
                         </Alert>
                     </Col>
                 </Row>

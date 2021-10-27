@@ -14,6 +14,7 @@ CREATE TABLE admin(
 
 CREATE TABLE patient(
   patient_id SERIAL PRIMARY KEY,
+  isPositive BOOLEAN,
   name VARCHAR(255),
   email VARCHAR(255),
   positive_date TIMESTAMPTZ,

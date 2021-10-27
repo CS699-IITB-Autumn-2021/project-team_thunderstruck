@@ -14,7 +14,9 @@ import {Link} from 'react-router-dom';
 
 export default function Header() {
     return (
+        /* https://react-bootstrap.github.io/components/navbar/ */
         <Navbar bg="dark" expand="lg" variant="dark" fixed="top" >
+            {/* Reference for fluid container https://react-bootstrap.github.io/layout/grid/ */}
             <Container fluid>
                 <Navbar.Brand href="#">IITB Covid Center</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
@@ -25,12 +27,14 @@ export default function Header() {
                     navbarScroll
                 >
                     <Nav.Link href="#" as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link href="#" as={Link} to="/signup">Signup</Nav.Link>
-                    <Nav.Link href="#" as={Link} to="/admin-panel">Admin Panel</Nav.Link>
+                    {/* <Nav.Link href="#" as={Link} to="/signup">Signup</Nav.Link>
+                    <Nav.Link href="#" as={Link} to="/admin-panel">Admin Panel</Nav.Link> */}
                     <Nav.Link href="#" as={Link} to="/studentadv">Student Advisory</Nav.Link>
                     <Nav.Link href="#" as={Link} to="/campusadv">Campus Advisory</Nav.Link>
                     <Nav.Link href="#" as={Link} to="/circular">Covid Circulars</Nav.Link>
+                    <Nav.Link href="#" as={Link} to="/contacts">Task Force</Nav.Link>
                 </Nav>
+                {/* https://react-bootstrap.github.io/components/forms/ */}
                 <Form className="d-flex">
                     <Button variant="danger" as={Link} to="/login">Admin Login</Button>
                 </Form>

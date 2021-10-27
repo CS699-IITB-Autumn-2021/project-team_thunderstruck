@@ -16,6 +16,7 @@ import Footer from '../Footer/Footer';
 
 export default function Circular() {
     return (
+        /* Reference for fluid container https://react-bootstrap.github.io/layout/grid/ */
         <Container fluid>
             <Row>
                 <Header />
@@ -27,6 +28,8 @@ export default function Circular() {
                     <h3>Important Circulars</h3>
                 </Row>
                 <Row  style={{"margin": "0 5% 5% 5%"}}>
+                {/* Reference for Table https://react-bootstrap.github.io/components/table/ */}
+                
                 <Table style={{"width": "100%", color: "#555"}} bordered>
                     <tbody>
                         <tr style={{"background-color": "#ddd"}}>

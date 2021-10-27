@@ -9,7 +9,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
+import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
+
+
+import {
+    Redirect
+  } from "react-router-dom";
 
 
 
@@ -21,10 +27,12 @@ function Login(props) {
 
     const baseURL = "http://localhost:8080";
     const [aid, SetAid] = useState("");
+    const [loginFail, setLoginFail] = useState(false);
     const [password, setPassword] = useState("");
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
+        setLoginFail(false);
         axios
         .post(baseURL + "/login", {
           aid: aid,
@@ -32,8 +40,14 @@ function Login(props) {
         })
         .then((response) => {
           console.log(response.data);
+          if (response.data.status === 0) {
+            //   alert("hoora");
+            window.location.href = '../admin-panel';
+          } else {
+          }
           setPassword("");
           SetAid("");
+          setLoginFail(true);
         });
     }
 
@@ -68,6 +82,13 @@ function Login(props) {
                             </Form>
                         </Col>
                     </Row>
+                    <Row className="justify-content-center mt-5">
+                    <Col md={4} sm={8} xs={12}>
+                        <Alert variant="danger" style ={{display: loginFail ? "block" : "none"}} >
+                            Login failed!
+                        </Alert>
+                    </Col>
+                </Row>
                 </Container>
             </Row>
             <Row>

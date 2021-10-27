@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from "axios";
 import '../../form.css';
 
@@ -8,6 +8,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+
+import Table from 'react-bootstrap/Table';
+
+import Alert from 'react-bootstrap/Alert';
 
 
 
@@ -57,6 +61,14 @@ import Footer from '../Footer/Footer';
         const baseURL = "http://localhost:8080"
         const [name, setName] = useState("");
         const [email, setEmail] = useState("");
+        const [pid, setPID] = useState(0);
+        const [allRecords, setAllRecords] = useState([
+            
+        ]);
+        const [isCreated, setIsCreated] = useState(false);
+        const [createForm, setCreateForm] = useState(true);
+        const [updateForm, setUpdateForm] = useState(false);
+        const [isUpdated, setIsUpdated] = useState(false);
         const [zones, setZones] = useState({
             z1: false,
             z2: false,
@@ -93,8 +105,10 @@ import Footer from '../Footer/Footer';
         });
 
     
-        const handleSubmit = (evt) => {
+        const handleCreateSubmit = (evt) => {
             evt.preventDefault();
+            setIsCreated(false);
+            setIsUpdated(false);
             axios
             .post(baseURL + "/new-patient", {
                 name: name,
@@ -139,9 +153,28 @@ import Footer from '../Footer/Footer';
                     z31: false,
                     z32: false,
                 });
-
+                setIsCreated(true);
+                fetchAllRecords();
             });
         }
+
+
+        const handleUpdateSubmit = (evt) => {
+            evt.preventDefault();
+            setIsCreated(false);
+            setIsUpdated(false);
+            axios
+            .post(baseURL + "/update-patient", {
+                pid: pid
+            })
+            .then((response) => {
+                console.log(response.data);
+                setPID("");
+                setIsUpdated(true);
+                fetchAllRecords();
+            });
+        }
+
         const handleInputChange = (event) => {
             const target = event.target;
             const value = target.checked;
@@ -154,6 +187,31 @@ import Footer from '../Footer/Footer';
             
         }
 
+
+        const handleFormToggle = (event) => {
+            event.preventDefault();
+            setCreateForm(!createForm);
+            setUpdateForm(!updateForm);
+            
+        }
+
+        const fetchAllRecords = () => {
+            axios
+            .post(baseURL + "/fetch-all-records", {
+            })
+            .then((response) => {
+                console.log(response.data);
+                setAllRecords(response.data.records);
+            });
+        };
+
+
+        useEffect(() => {
+            return fetchAllRecords();
+        }, []);
+
+
+
         return (
 
             <Container fluid>
@@ -161,54 +219,122 @@ import Footer from '../Footer/Footer';
                 <Header />
             </Row>
             <Row style={{"margin-top": "100px", "margin-bottom": "100px"}}>
-                <Container fluid>
+                <Container fluid> 
 
                 <Row className="justify-content-center mt-5">
                         <Col md={4} sm={8} xs={12}>
-                            <Button variant="outline-primary">FETCH</Button>
-                            <Button variant="outline-success">CREATE</Button>
-                            <Button variant="outline-danger">DELETE</Button>
+                            <Button variant={createForm ? "success" : "outline-success"} onClick={handleFormToggle} disabled={createForm}>CREATE</Button>
+                            <Button variant={updateForm ? "danger" : "outline-danger"} onClick={handleFormToggle} disabled={updateForm}>UPDATE</Button>
                         </Col>
                 </Row>
                     <Row className="justify-content-center mt-5">
-                        <Col md={4} sm={8} xs={12} className="formContainer">
-
-
-                        <Form  onSubmit={handleSubmit}>
-                            <h3 align="center">Add New Patient</h3><br/>
-                            <Form.Group className="mb-3" controlId="formBasicName">
-                                <Form.Label>Patient Name </Form.Label>
-                                <Form.Control type="text" placeholder="Enter name" value={name} onChange={e => setName(e.target.value)} required/>
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" placeholder="Enter Email"  value={email} onChange={e => setEmail(e.target.value)} required/>
-                                <Form.Text className="text-muted">
-                                Your email is secure.
-                                </Form.Text>
-                            </Form.Group>
-
-
-                        
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    {Object.keys(zoneInfo).map((zone, i) => {
-                        var zoneName = "z" + zoneInfo[zone];
-                        return <Form.Check type="checkbox" inline style={{"margin": "2%"}}>
-                            <Form.Check.Input style={{"color": "#107302"}} name={zoneName} type="checkbox" isValid onChange={handleInputChange}/>
-                            <Form.Check.Label style={{"padding-left": "3px", "color": "#107302"}}>{zone.toUpperCase()}</Form.Check.Label>
-                        </Form.Check>
-                    })}
-
-                    </Form.Group>
-
-
-                    <Button variant="primary" type="submit">
-                                Add Patient
-                            </Button>
-                        </Form>
-                
-                        </Col>
+                        {
+                            createForm && <Col md={4} sm={8} xs={12} className="formContainer">
+    
+    
+                            <Form  onSubmit={handleCreateSubmit}>
+                                <h3 align="center">Add New Patient</h3><br/>
+    {/* 
+                                <Form.Group className="mb-3" controlId="formBasicName">
+                                        <Form.Check 
+                                            type="checkbox"
+                                            id={`default-checkbox`}
+    
+                                            inline
+                                        />
+                                    <Form.Label>Existing Patient</Form.Label>
+                                </Form.Group> */}
+    
+                                <Form.Group className="mb-3" controlId="formBasicName">
+                                    <Form.Label>Patient Name </Form.Label>
+                                    <Form.Control type="text" placeholder="Enter name" value={name} onChange={e => setName(e.target.value)} required/>
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formBasicEmail">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control type="email" placeholder="Enter Email"  value={email} onChange={e => setEmail(e.target.value)} required/>
+                                    <Form.Text className="text-muted">
+                                    Your email is secure.
+                                    </Form.Text>
+                                </Form.Group>
+    
+    
+                            
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        {Object.keys(zoneInfo).map((zone, i) => {
+                            var zoneName = "z" + zoneInfo[zone];
+                            return <Form.Check type="checkbox" inline style={{"margin": "2%"}}>
+                                <Form.Check.Input style={{"color": "#107302"}} name={zoneName} type="checkbox" checked={zones[zoneName]} isValid onChange={handleInputChange}/>
+                                <Form.Check.Label style={{"padding-left": "3px", "color": "#107302"}}>{zone.toUpperCase()}</Form.Check.Label>
+                            </Form.Check>
+                        })}
+    
+                        </Form.Group>
+    
+    
+                        <Button variant="primary" type="submit">
+                                    Add Patient
+                                </Button>
+                            </Form>
+                    
+                            </Col>
+                        }
+                        {
+                            updateForm && <Col md={4} sm={8} xs={12} className="formContainer">
+                            
+                            <Form onSubmit={handleUpdateSubmit}>
+                                <h3 align="center">Update Patient Record</h3><br/>
+    
+                                <Form.Group className="mb-3" controlId="formBasicName">
+                                    <Form.Label>Patient ID</Form.Label>
+                                    <Form.Control type="number" placeholder="Enter Patient ID" value={pid} onChange={e => setPID(e.target.value)} required/>
+                                </Form.Group>
+    
+    
+                        <Button variant="warning" type="submit">
+                                    Tested Negative
+                                </Button>
+                            </Form>
+                    
+                            </Col>
+                        }
                     </Row>
+                    <Row className="justify-content-center mt-5">
+                        <Col md={6} sm={8} xs={12}>
+                            <h4 align="center">All Patient Records</h4> <br/>
+                    <Table bordered responsive>
+
+                        <thead>
+                            <tr>
+                                <th>PatientID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {
+                            allRecords.map((record, idx) => {
+                                return <tr>
+                                    <td>{record.patient_id}</td>
+                                    <td>{record.name}</td>
+                                    <td>{record.email}</td>
+                                    <td>{record.ispositive ? "Positive" : "Negative"}</td>
+                                </tr>
+                            })
+                        }
+                        </tbody>
+                    </Table></Col>
+                    </Row>
+                    <Row className="justify-content-center mt-5">
+                    <Col md={4} sm={8} xs={12}>
+                        <Alert variant="success" style ={{display: isCreated ? "block" : "none"}} >
+                            Patient record added successfully!
+                        </Alert>
+                        <Alert variant="success" style ={{display: isUpdated ? "block" : "none"}} >
+                            Patient record updated successfully!
+                        </Alert>
+                    </Col>
+                </Row>
                 </Container>
             </Row>
             <Row>

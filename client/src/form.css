@@ -1,6 +1,22 @@
+/* Reference https://stackoverflow.com/questions/31603891/twitter-bootstrap-3-images-within-carousel-auto-resize-to-fit-and-navbar-remove */
+
 .formContainer {
     border: 1px solid #bbb; 
     padding: 2% !important; 
     border-radius: 5px; 
     box-shadow: 3px 3px 2px #ccc;
+}
+
+.carousel{
+    height: 300px;
+    width : 97%; 
+    margin-left:2%;
+  }
+  
+.cards_heading{
+    font-size:10vw;
+}
+
+.cards_sub_heading{
+    font-size:4vw;
 }

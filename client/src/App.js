@@ -21,6 +21,7 @@ import Footer from './components/Footer/Footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import CampusAdv from './components/CampusAdv/CampusAdv';
+import Contacts from './components/Contacts/Contacts';
 
 
 
@@ -48,6 +49,9 @@ function App() {
           </Route>
           <Route path="/circular">
             <Circular />
+          </Route>
+          <Route path="/contacts">
+            <Contacts />
           </Route>
           <Route path="/">
             <Home />
