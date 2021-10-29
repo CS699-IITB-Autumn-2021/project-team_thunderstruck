@@ -10,6 +10,14 @@ import chart_studio.plotly as py
 import chart_studio.tools as tls
 
 import plotly.express as px
+"""
+this script uses choropleth maps to generate interactive maps over the campus map to display covid hotspot zones
+it takes iitb_map.geojson as input and campus_covid_data.csv as data to generate the map.
+
+at last the function py.plot() uploads the map on the plotly server from where it is fetched.
+
+plotly express is used to generate plots.
+"""
 # https://geojson.io/#map=15/19.1288/72.9090
 campus_zones = json.load(open("iitb_map.geojson", "r"))
 
@@ -28,6 +36,7 @@ api_key= 'jNontKOQXWe6D988kwcz'
 chart_studio.tools.set_credentials_file(username=username,api_key=api_key)
 
 fig = px.choropleth_mapbox(
+
     df,
     locations="id",
     geojson=campus_zones,
