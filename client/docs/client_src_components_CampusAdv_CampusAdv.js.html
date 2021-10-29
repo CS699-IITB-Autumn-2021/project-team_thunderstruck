@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: client/src/components/CampusAdv/CampusAdv.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: client/src/components/CampusAdv/CampusAdv.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react';
+
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Accordion from 'react-bootstrap/Accordion';
+import Table from 'react-bootstrap/Table';
+
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
+export default 
+/**
+ * Component for showing generating the html for Campus Advisory page.
+ *
+ * @component
+ * @example
+ * return (
+ *   &lt;CampusAdv/>
+ * )
+ */ function CampusAdv() {
+    return (
+       /* Reference : https://react-bootstrap.github.io/layout/grid/ */
+        &lt;Container fluid>
+            &lt;Row>
+                &lt;Header />
+            &lt;/Row>
+
+            &lt;Row style={{"margin-top": "100px"}}>
+                &lt;Container fluid>
+                &lt;Row>
+                {/* Reference : https://react-bootstrap.github.io/components/accordion/ */}
+                &lt;Accordion defaultActiveKey="0">
+  &lt;Accordion.Item eventKey="0">
+  &lt;Accordion.Header>Several restrictions have been put on entry/exit from the IIT Campus to minimize entry/exits that could result in covid infection spread, while ensuring essential activities are not disrupted. Details of what is not permitted/permitted with approval/permitted without approval, are provided below:&lt;/Accordion.Header>
+    &lt;Accordion.Body>
+    &lt;p>
+    The institute and student functionaries are seeking to minimise the damage caused to academics and careers of registered students of IIT Bombay due to Covid-19. This page has all that you need to know about the current situation on the campus.
+    &lt;ol>
+        &lt;li>
+        Entry into IIT: Section 1
+        &lt;/li>
+        &lt;li>
+        Exit from IIT: Section 2
+        &lt;/li>
+        &lt;li>
+        Entry of delivery/supply vehicles: Section 3
+        &lt;/li>
+        &lt;li>
+        Quarantine/Home Isolation policies: Section 4
+        &lt;/li>
+        &lt;li>
+        Household Help policies: Section 5
+        &lt;/li>
+     &lt;/ol>
+
+    &lt;/p>
+
+    &lt;/Accordion.Body>
+  &lt;/Accordion.Item>
+  &lt;Accordion.Item eventKey="1">
+  &lt;Accordion.Header>Documents and permissions required are listed below for each category:&lt;/Accordion.Header>
+    &lt;Accordion.Body>
+    &lt;p>
+    All IIT Staff/Faculty and their family members residing in IITB
+    &lt;ol>
+        &lt;li>
+        Keep your IIT ID card with you to allow entry
+        &lt;/li>
+        &lt;li>
+        No need for any permission for reentry if IITB residents after trips within Mumbai, or for people commuting to work at IITB.
+        &lt;/li>
+        &lt;li>
+        for more details click the link : https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#
+        &lt;/li>
+        
+     &lt;/ol>
+
+    &lt;/p>
+
+    &lt;/Accordion.Body>
+  &lt;/Accordion.Item>
+  &lt;Accordion.Item eventKey="2">
+  &lt;Accordion.Header>Exit From IIT&lt;/Accordion.Header>
+    &lt;Accordion.Body>
+    &lt;p>
+    Normally there are no curbs on exit from IIT.  However, to minimize risk of covid infection spread, exit from IIT is temporarily restricted in some ways.  Details of what is not permitted/permitted with approval/permitted without approval, are provided below.
+    &lt;ol>
+        &lt;li>
+        Students staying in hostels:  Exit needs permission from Warden/Dean SA/ADean SA.  This is required to keep the hostels in a relatively safe bubble.
+         On return, if the visit involves overnight stay, either soft quarantine or full quarantine may apply depending on the nature of the visit.  Dean SA will share the rules with students.
+        &lt;/li>
+        &lt;li>
+        Students with approval to commute: Scan your ID card to enter/exit
+        &lt;/li>
+        &lt;li>
+        for more details click the link : https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#
+        &lt;/li>
+        
+     &lt;/ol>
+
+    &lt;/p>
+
+    &lt;/Accordion.Body>
+  &lt;/Accordion.Item>
+  &lt;Accordion.Item eventKey="3">
+  &lt;Accordion.Header>Entry Policy for Delivery/Supply Vehicles&lt;/Accordion.Header>
+    &lt;Accordion.Body>
+    &lt;p>
+    The following details should be recorded at the main gate for all goods vehicles that are allowed to enter IIT Bombay.
+    &lt;ol>
+        &lt;li>
+        Date and Time of Entry
+        &lt;/li>
+        &lt;li>
+        Vehicle Registration Number
+        &lt;/li>
+        &lt;li>
+        Name of the company/shop they represent
+        &lt;/li>
+        &lt;li>
+        for more details click the link : https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#
+        &lt;/li>
+        
+     &lt;/ol>
+
+    &lt;/p>
+
+    &lt;/Accordion.Body>
+  &lt;/Accordion.Item>
+  &lt;Accordion.Item eventKey="4">
+  &lt;Accordion.Header> Quaratine rules:&lt;/Accordion.Header>
+    &lt;Accordion.Body>
+    &lt;p>
+    Travel Quarantine
+    &lt;ol>
+        &lt;li>
+        For Hostel residents:  soft quarantine rules apply for 1 week, but can work in shared labs/offices, similar to those commuting to IITB.
+        &lt;/li>
+        &lt;li>
+        For others: no restrictions.
+        &lt;/li>
+        &lt;li>
+            Local government rules on quarantine as applicable at the time of quarantine must be followed. Any IIT specific rules  below are on top of the government rules.
+        &lt;/li>
+        &lt;li>
+        for more details click the link : https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#
+        &lt;/li>
+        
+     &lt;/ol>
+
+    &lt;/p>
+
+    &lt;/Accordion.Body>
+  &lt;/Accordion.Item>
+  &lt;/Accordion>
+&lt;/Row>
+
+                &lt;Row>
+                {/* Reference : https://react-bootstrap.github.io/components/table/  */}
+                &lt;Table striped bordered hover>
+                    &lt;thead>
+                        &lt;tr>
+                        &lt;th>Document&lt;/th>
+                        &lt;th>Link&lt;/th>
+                        &lt;/tr>
+                    &lt;/thead>
+                    &lt;tbody>
+                        &lt;tr>
+                            &lt;td>Several restrictions have been put on entry/exit from the IIT Campus to minimize entry/exits that could result in covid infection spread, while ensuring essential activities are not disrupted. Details of what is not permitted/permitted with approval/permitted without approval, are provided below:&lt;/td>
+                            &lt;td>&lt;a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>Documents and permissions required are listed below for each category:&lt;/td>
+                            &lt;td>&lt;a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>Exit From IIT&lt;/td>
+                            &lt;td>&lt;a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>&lt;tr>
+                            &lt;td>Entry Policy for Delivery/Supply Vehicles&lt;/td>
+                            &lt;td>&lt;a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr>
+                            &lt;td>Quaratine rules:&lt;/td>
+                            &lt;td>&lt;a href="https://docs.google.com/document/d/18ofRuycalILhjU9d4gavm3yN7dA5jsowY-0ookx54P4/edit#" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                       
+                    &lt;/tbody>
+                &lt;/Table>
+                &lt;/Row>
+                &lt;/Container>
+            &lt;/Row>
+
+
+
+            &lt;Row>
+                &lt;Footer />
+            &lt;/Row>
+        &lt;/Container>
+    )
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Admin.html">Admin</a></li><li><a href="CampusAdv.html">CampusAdv</a></li><li><a href="Circular.html">Circular</a></li><li><a href="Contacts.html">Contacts</a></li><li><a href="Footer.html">Footer</a></li><li><a href="Header.html">Header</a></li><li><a href="Home.html">Home</a></li><li><a href="Login.html">Login</a></li><li><a href="Signup.html">Signup</a></li><li><a href="StudentAdv.html">StudentAdv</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AdminSignupRoute">AdminSignupRoute</a></li><li><a href="global.html#CovidCasesPlotsGenerationScript">Covid Cases Plots Generation Script</a></li><li><a href="global.html#FetchPatientsRecords">FetchPatientsRecords</a></li><li><a href="global.html#HeatMapGenerationScript">HeatMap Generation Script</a></li><li><a href="global.html#LoginRoute">LoginRoute</a></li><li><a href="global.html#PatientSignupRoute">PatientSignupRoute</a></li><li><a href="global.html#PatientUpdateRoute">PatientUpdateRoute</a></li><li><a href="global.html#UpdateCovidPlotsRoute">UpdateCovidPlotsRoute</a></li><li><a href="global.html#UpdateHotSpotRoute">UpdateHotSpotRoute</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Fri Oct 29 2021 23:23:08 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

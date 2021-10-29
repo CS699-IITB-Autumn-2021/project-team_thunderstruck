@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: client/src/components/Contacts/Contacts.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: client/src/components/Contacts/Contacts.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react';
+
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Figure from 'react-bootstrap/Figure';
+import Col from 'react-bootstrap/Col';
+import Accordion from 'react-bootstrap/Accordion';
+import Table from 'react-bootstrap/Table';
+
+// import advice from './advice.png';
+// import reopen from './reopen.png';
+
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
+
+export default 
+/**
+ * Component for showing generating the html for admin page.
+ *
+ * @component
+ * @example
+ * return (
+ *   &lt;Admin/>
+ * )
+ */ function Contacts() {
+    return (
+        /* Reference for fluid container https://react-bootstrap.github.io/layout/grid/ */
+        &lt;Container fluid>
+            &lt;Row>
+                &lt;Header />
+            &lt;/Row>
+            {/* Reference : https://www.w3schools.com/css/css_margin.asp
+            https://www.w3schools.com/css/css_font_size.asp */}
+            &lt;Row style={{"margin-top": "100px", "font-size": "0.8rem"}}>
+                &lt;Container fluid>
+                &lt;Row  style={{"margin-left": "5%", "margin-right": "5%"}}>
+                    &lt;h3>COVID Task-Force&lt;/h3>
+                &lt;/Row>
+                
+                &lt;Row  style={{"margin": "0 5% 5% 5%"}}>
+                {/* Reference for Accordian https://react-bootstrap.github.io/components/accordion/ */}
+                &lt;Accordion defaultActiveKey="0">
+                &lt;Accordion.Item eventKey="0">
+                &lt;Accordion.Header>Main Task Force Committee&lt;/Accordion.Header>
+                &lt;Accordion.Body>
+                {/* Reference for Table https://react-bootstrap.github.io/components/table/ */}
+                
+                &lt;Table bordered responsive>
+                    &lt;tbody>
+                    &lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>     Prof. S. Sudarshan, Dy. Director (AIA)&lt;/td>
+                        &lt;td>Convener&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>      Prof. A. K. Suresh,&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Prof. T. Kundu, Dean (Student Affairs)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Prof. George Mathew, Associate Dean (Student Affairs)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Prof. Amitava De, Dean (Academic Programme)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Prof. Prita Pant, Associate Dean (Academic Programme)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Prof. B.V.S. Vishwanadham, Dean (Infrastructure Planning and Support)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Dr. R. Premkumar, Registrar&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Dr. Nisha Shah, Chief Medical Officer&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Mr. K.R.P. Unnithan, Superintending Engineer&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Dr. N. Dabholkar, Chief Manager (Hospitality)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Chief Security Officer (CSO)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Mrs. Falguni Banerjee Naha, Public Relations Officer&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>Public Health Officer (PHO)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>General Secretary - Hostel Affairs (Mohd Zakir Hussain)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>General Secretary - Academic Affairs/ Under-Graduate (Varshit Kumar and Madhav Gupta)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;td>General Secretary - Academic Affairs/ Post-Graduate (Aditya Chalishazar)&lt;/td>
+                        &lt;td>Member&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/Table>
+
+                &lt;/Accordion.Body>
+                &lt;/Accordion.Item>
+
+                &lt;Accordion.Item eventKey="1">
+                &lt;Accordion.Header>Student Task Force&lt;/Accordion.Header>
+                &lt;Accordion.Body>
+                &lt;Table bordered responsive>
+                    &lt;tbody>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>Designation&lt;/td>
+                            &lt;td>&lt;p>Name&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Contact Number&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Email ID&lt;/p>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>GS, H16&lt;/td>
+                            &lt;td>Gurpreet Singh &lt;/td>
+                            &lt;td>9464208257&lt;/td>
+                            &lt;td>&amp;nbsp;&lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>GS, H13&lt;/td>
+                            &lt;td>Akshay Nair &lt;/td>
+                            &lt;td>8291585637&lt;/td>
+                            &lt;td>&amp;nbsp;&lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>GSAA-PG Elect&lt;/td>
+                            &lt;td>Radhik Rammohan &lt;/td>
+                            &lt;td>9712132512&lt;/td>
+                            &lt;td>&amp;nbsp;&lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&lt;p>General Secretary Academic Affairs (PG)&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>2019-20: Aditya Chalishazar&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>9930626982&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>  gsecaapg@iitb.ac.in&lt;/p>&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&amp;nbsp;&lt;/td>
+                            &lt;td>&lt;p>2020-21: Radhik Rammohan&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>7907268355&lt;/p>&lt;/td>
+                            &lt;td>&amp;nbsp;&lt;/td>&lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&lt;p>General Secretary Academic Affairs (UG)&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>2019-20: Varshit Kumar&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>9571376030&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>  gsecaaug@iitb.ac.in&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&amp;nbsp;&lt;/td>
+                            &lt;td>&lt;p>2020-21: Madhav Gupta&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>8860138450&lt;/p>&lt;/td>
+                            &lt;td>&amp;nbsp;&lt;/td>&lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&lt;p>General Secretary Hostel Affairs&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>2019-20: Arbaj Ahmed&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>9987096721&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>  gsecha@iitb.ac.in&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&amp;nbsp;&lt;/td>
+                            &lt;td>&lt;p>2020-21: Mohd Zakir Hussain&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>9144880055&lt;/p>&lt;/td>
+                            &lt;td>&amp;nbsp;&lt;/td>&lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&lt;p>General Secretary Technical Affairs&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>2019-20: Shobhna Misra&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>8169818278&amp;nbsp;&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>  gsectech@iitb.ac.in&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&amp;nbsp;&lt;/td>
+                            &lt;td>&lt;p>2020-21: Anirudh Mittal&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>9352032003&lt;/p>&lt;/td>
+                            &lt;td>&amp;nbsp;&lt;/td>&lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&lt;p>General Secretary Cultural Affairs&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>2019-20: Raghav Goyal&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>9930362091&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>  gseccult@iitb.ac.in&lt;/p>&lt;/td>
+                            &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&lt;p>General Secretary Sport Affairs&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>2019-20: Vinay Venkat Dadi&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>7013009369&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>  gsecsport@iitb.ac.in&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>&amp;nbsp;&lt;/td>
+                            &lt;td>&lt;p>2020-21: Yogender Singh&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>9321299294&lt;/p>&lt;/td>
+                            &lt;td>&amp;nbsp;&lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/Table>       
+
+                &lt;/Accordion.Body>
+                &lt;/Accordion.Item>
+
+                &lt;Accordion.Item eventKey="2">
+                &lt;Accordion.Header>Task force on security matters&lt;/Accordion.Header>
+                &lt;Accordion.Body>
+                &lt;Table bordered responsive>
+                    &lt;tbody>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Incumbent Chairman, Security Advisory Committee (Prof. T. Kundu, Dean of Student Affairs)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Convener&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Chairman-designate, Security Advisory Committee (Prof. Sanjeev Chaudhuri, Department of Environmental Science &amp;amp; Engineering)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Chief Security Officer (CSO)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Asst. Security Officer (ASO)-1&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Asst. Security Officer (ASO)-2&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Asst. Security Officer (ASO)-3&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Student Representative (Gurpreet Singh Dhillon)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Student Representative (Nisha Chikkara)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/Table>
+
+                &lt;/Accordion.Body>
+                &lt;/Accordion.Item>
+
+                &lt;Accordion.Item eventKey="3">
+                &lt;Accordion.Header>The Committee for rebooting the campus post lockdown&lt;/Accordion.Header>
+                &lt;Accordion.Body>
+
+                &lt;Table bordered responsive>
+                    &lt;tbody>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. Prita Pant, Asso. Dean (Academic Programme)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Convener&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. George Mathew, Associate Dean (Student Affairs)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. Ruchi Anand, Chairperson HHAC&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. Kiran Kondabagil, Department of Bioscience &amp;amp; Bioengineering&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Dr. Banumathy Srikant, IIT Hospital (for Clinical inputs)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. Kameshwari Chebrolu, Department of Computer Science &amp;amp; Engineering&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>General Secretary - Hostel Affairs (Mohd Zakir Hussain)&lt;/p>
+                            &lt;/td>
+                            &lt;td>Member&lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/Table>
+
+                &lt;/Accordion.Body>
+                &lt;/Accordion.Item>
+
+                &lt;Accordion.Item eventKey="4">
+                &lt;Accordion.Header>The Subcommittee of the Covid-19 task force to address the issue of infrastructural modifications that may be needed/desirable in the campus for the post-lockdown period&lt;/Accordion.Header>
+                &lt;Accordion.Body>
+                &lt;Table bordered responsive>
+                    &lt;tbody>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. Soumyo Mukherjee&amp;nbsp;&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Convener&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. Santanu Bandopadhyay, Assoc. Dean2 (IPS)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. Kishore Chatterjee&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>&lt;span>Member&lt;/span>&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. Sarika Mehra&amp;nbsp;&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Mr. Bhonsale, Public&amp;nbsp; Health Officer&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Mr. K.R.P. Unnithan, Superintending Engineer&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Mr. Rajendra N., EE (EMD)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>General Secretary - Hostel Affairs (Mohd Zakir Hussain)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>General Secretary H16 (Gurpreet Singh Dhillon)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Mr. Pankaj Chachadi, AR (MM)&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                                &lt;div>&amp;nbsp;&lt;/div>
+                            &lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/Table>
+
+                &lt;/Accordion.Body>
+                &lt;/Accordion.Item>
+
+                &lt;Accordion.Item eventKey="5">
+                &lt;Accordion.Header>Contact Tracing Team&lt;/Accordion.Header>
+                &lt;Accordion.Body>
+                &lt;Table bordered responsive>
+                    &lt;tbody>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. A. M. Pradeep&amp;nbsp;&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Convener&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Prof. Debjani Paul&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Co-Convenor&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color" : "#82c0e7"}}>
+                            &lt;td>
+                                &lt;p>Mr. Sajith, Safety Officer&lt;/p>
+                            &lt;/td>
+                            &lt;td>
+                                &lt;p>Member&lt;/p>
+                            &lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/Table>
+                &lt;/Accordion.Body>
+                &lt;/Accordion.Item>
+                &lt;/Accordion>
+            &lt;/Row>
+            &lt;/Container>
+            &lt;/Row>
+            &lt;Row>
+                &lt;Footer />
+            &lt;/Row>
+        &lt;/Container>
+    )
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Admin.html">Admin</a></li><li><a href="CampusAdv.html">CampusAdv</a></li><li><a href="Circular.html">Circular</a></li><li><a href="Contacts.html">Contacts</a></li><li><a href="Footer.html">Footer</a></li><li><a href="Header.html">Header</a></li><li><a href="Home.html">Home</a></li><li><a href="Login.html">Login</a></li><li><a href="Signup.html">Signup</a></li><li><a href="StudentAdv.html">StudentAdv</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AdminSignupRoute">AdminSignupRoute</a></li><li><a href="global.html#CovidCasesPlotsGenerationScript">Covid Cases Plots Generation Script</a></li><li><a href="global.html#FetchPatientsRecords">FetchPatientsRecords</a></li><li><a href="global.html#HeatMapGenerationScript">HeatMap Generation Script</a></li><li><a href="global.html#LoginRoute">LoginRoute</a></li><li><a href="global.html#PatientSignupRoute">PatientSignupRoute</a></li><li><a href="global.html#PatientUpdateRoute">PatientUpdateRoute</a></li><li><a href="global.html#UpdateCovidPlotsRoute">UpdateCovidPlotsRoute</a></li><li><a href="global.html#UpdateHotSpotRoute">UpdateHotSpotRoute</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Fri Oct 29 2021 23:23:08 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

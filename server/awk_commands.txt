@@ -1,0 +1,5 @@
+Reference : https://www.tutorialspoint.com/awk/index.html
+Insert Location Records:
+awk -F ',' '{print "INSERT INTO location(name, lat, lon) VALUES('\''" $2 "'\'', '\''0.0'\'', '\''0.0'\'');"}' campus_covid_data.csv > insert_data.sql 
+
+awk -F ',' '{print "\""$2"\":" $1","}' campus_covid_data.csv > zones.json

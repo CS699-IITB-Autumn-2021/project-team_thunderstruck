@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: client/src/components/Circular/Circular.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: client/src/components/Circular/Circular.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>
+import React from 'react';
+
+import '../../form.css';
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Figure from 'react-bootstrap/Figure';
+import Col from 'react-bootstrap/Col';
+import Accordion from 'react-bootstrap/Accordion';
+import Table from 'react-bootstrap/Table';
+
+
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
+export default
+/**
+* Component for showing generating the html for Circular page.
+*
+* @component
+* @example
+* return (
+*   &lt;Circular/>
+* )
+*/ function Circular() {
+    return (
+        /* Reference for fluid container https://react-bootstrap.github.io/layout/grid/ */
+        &lt;Container fluid>
+            &lt;Row>
+                &lt;Header />
+            &lt;/Row>
+
+            &lt;Row style={{"margin-top": "100px", "margin-bottom": "100px"}}>
+                &lt;Container fluid>
+                &lt;Row  style={{"margin-left": "5%", "margin-right": "5%"}}>
+                    &lt;h3>Important Circulars&lt;/h3>
+                &lt;/Row>
+                &lt;Row  style={{"margin": "0 5% 5% 5%"}}>
+                {/* Reference for Table https://react-bootstrap.github.io/components/table/ */}
+                
+                &lt;Table style={{"width": "100%", color: "#555"}} bordered>
+                    &lt;tbody>
+                        &lt;tr style={{"background-color": "#ddd"}}>
+                            &lt;th>SR.NO.&lt;/th>
+                            &lt;th>DATE&lt;/th>
+                            &lt;th>CIRCULAR/ Notification No.&lt;/th>
+                            &lt;th>DESCRIPTION&lt;/th>
+                            &lt;th>REPORT&lt;/th>
+                        &lt;/tr>
+                        
+                        
+                        &lt;tr align="left" valign="top" style={{"background-color": "#F5D081"}}>
+                            &lt;td>&lt;p>1.&lt;/p>
+                            &lt;/td>
+                            &lt;td>&lt;p>30th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Contact details&amp;nbsp; of Student Counsellors&amp;nbsp;&amp;nbsp;&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>The document containing contact details (in the next column 'REPORT') of Student Counsellors is password protected. Please check student-notices for the same.&amp;nbsp;&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="/sites/www.iitb.ac.in/files/StudentCounsellors.docx" target="_blank">Clicking here will download a password-protected file with the required information to your disk. The password has been mailed to you on student notices&lt;/a>&lt;/p>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>&lt;p>2.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>20th April 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Approved reimbursement policy for buying&amp;nbsp; medicines&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>The document contains 'OPD reimbursement policy with the rollout of telemedicine services in IIT Hospital'&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/OPD%20reimbursement%20circular.pdf" target="_blank">Click here to view the file&lt;/a>&lt;/p>&lt;/td>
+                            &lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#F5D081"}}>
+                            &lt;td>&lt;p>3.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>6th April 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Information for students from IIT Hospital&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>'COVID-10: What can you do?'&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/COVID_IITB_From_Hospital.pdf" target="_blank">Click here to view the file&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>&lt;p>4.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>31st March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>FAQs&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>FAQs regarding academic and other matters during COVID-19&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/FAQs.pdf" target="_blank">Click here to view the FAQs regarding academic and other matters during COVID-19&lt;/a>&amp;nbsp;&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#F5D081"}}>
+                            &lt;td>&lt;p>5.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>30th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>To Students from Dean (Academic Programme)&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Academic Matters - Spring Semester 2019-20&lt;/p>&lt;p>April 18, 2020: The issue of summer internship of external students to IIT Bombay&amp;nbsp; is&amp;nbsp; reviewed by the&amp;nbsp; concerned authority.&amp;nbsp; It is now&amp;nbsp; decided that external students can be offered summer internship&amp;nbsp; opportunities from IIT&amp;nbsp; Bombay only remotely, which will require no&amp;nbsp; physical presence at IIT Bombay. All other terms and conditions will remain the&amp;nbsp; same.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/FromDeanAP.pdf" target="_blank">Click here to view the email and revised academic calendar for Spring Semester 2019-20&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>&lt;p>6.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>29th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Survey for Students for compiling FAQ from Institute General Secretary&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Letter for student notices on FAQ by Institute General Secretary&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/IGS.pdf" target="_blank">Click here to view copy of letter&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#F5D081"}}>
+                            &lt;td>&lt;p>7.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>20th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>No. REG/ C-11/ 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Staff deployment policy in view of the COVID-19 virus situation and Institute facilities being used for quarantine and DoPT circular from Registrar's Office&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/Circularstaffdeploymentpolicy.pdf" target="_blank">Click here to view copy of circulars&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>&lt;p>8.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>19th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&amp;nbsp;&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>IITB Guidelines on home quarantine&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/IITBGuidelinesOnHomeQuarantine.pdf" target="_blank">Click here to view copy of guidelines on home quarantine&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#F5D081"}}>
+                            &lt;td>&lt;p>9.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>19th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&amp;nbsp;&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Guidelines for home quarantine given by the Government of India&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/DraftGuidelinesforhomequarantine.pdf" target="_blank">Click here to view copy of guidelines on home quarantine by the Govt. of India&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>&lt;p>10.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>18th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>No. REG/C-11/2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>This circular is in continuation to the earlier circular No. AO/Admin. V/2020 dated March 16, 2020 on the preventive measures against the spread of Corona Virus in the IIT Bombay campus from the Registrar's Office&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/PreventiveMeasuresII.pdf" target="_blank">Click here to view copy of the circular&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#F5D081"}}>
+                            &lt;td>&lt;p>11.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>18th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&amp;nbsp;&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Article from Science on the best practices for sanitising hands etc.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.sciencemag.org/news/2020/03/does-disinfecting-surfaces-really-prevent-spread-coronavirus" target="_blank">Click here to read the article&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>&lt;p>12.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>18th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&amp;nbsp;&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>The origin, transmission and clinical therapies on coronavirus disease 2019 (COVID-19) outbreak - an update on the status&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/TheOrigin.pdf" target="_blank">Click here to view the review report&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#F5D081"}}>
+                            &lt;td>&lt;p>13.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>17th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&amp;nbsp;&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Further measures to contain the spread of novel Corona Virus in IITB Campus from Director's Office&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/FurtherMeasuresA.pdf" target="_blank">Click here to view copy of the notification&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>&lt;p>14.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>16th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&amp;nbsp;&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Updates from the Task Force Committee&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/TaskForce1.pdf" target="_blank">Click here to view copy of the notification&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr align="left" valign="top" style={{"background-color": "#F5D081"}}>
+                            &lt;td>&lt;p>15.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>16th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>No. AO/Admin.V/2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Preventive measures against the spread of Corona Virus from Registrar's Office&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/PreventiveMeasuresagianstCovid19.pdf" target="_blank">Click here to view copy of the notification&lt;/a>&lt;/p>&lt;/td>&lt;/tr>
+                        &lt;tr style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>&lt;p>16.&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>14th March 2020&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>No. Corona-2020/ CR-58/ Aarogya-5&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>Whereas State Government has decided to invoke provisions of Epidemic Disease Act, 1897 vide Notification No. Corona 2020/ CR 58/ Aarogya-5, dated 13th March, 2020 from the date of issue of the notification,&lt;/p>&lt;/td>
+                            &lt;td>&lt;p>&lt;a href="http://www.iitb.ac.in/sites/www.iitb.ac.in/files/CoronaRegulationNotification.pdf" target="_blank">Click here to view copy of the notification&lt;/a>&lt;/p>&lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/Table>
+
+            &lt;/Row>
+
+            &lt;/Container>
+
+            &lt;/Row>
+
+            &lt;Row>
+                &lt;Footer />
+            &lt;/Row>
+        &lt;/Container>
+    )
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Admin.html">Admin</a></li><li><a href="CampusAdv.html">CampusAdv</a></li><li><a href="Circular.html">Circular</a></li><li><a href="Contacts.html">Contacts</a></li><li><a href="Footer.html">Footer</a></li><li><a href="Header.html">Header</a></li><li><a href="Home.html">Home</a></li><li><a href="Login.html">Login</a></li><li><a href="Signup.html">Signup</a></li><li><a href="StudentAdv.html">StudentAdv</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AdminSignupRoute">AdminSignupRoute</a></li><li><a href="global.html#CovidCasesPlotsGenerationScript">Covid Cases Plots Generation Script</a></li><li><a href="global.html#FetchPatientsRecords">FetchPatientsRecords</a></li><li><a href="global.html#HeatMapGenerationScript">HeatMap Generation Script</a></li><li><a href="global.html#LoginRoute">LoginRoute</a></li><li><a href="global.html#PatientSignupRoute">PatientSignupRoute</a></li><li><a href="global.html#PatientUpdateRoute">PatientUpdateRoute</a></li><li><a href="global.html#UpdateCovidPlotsRoute">UpdateCovidPlotsRoute</a></li><li><a href="global.html#UpdateHotSpotRoute">UpdateHotSpotRoute</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Fri Oct 29 2021 23:23:08 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

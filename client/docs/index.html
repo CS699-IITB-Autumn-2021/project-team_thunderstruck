@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><p>MOTIVATION:</p>
+<p>Have a centralized campus Covid information portal which provides the latest updates about campus covid cases, covid hotspots on campus, covid information for city and country, standard operating procedures and any other relevant information.
+Currently we get covid updates via emails and other information from campus covid advisory website. The need is to bring it all together and provide a one stop solution for all covid related information. A campus map with covid hotspots will help students recognise if they were exposed and can take appropriate measures.</p>
+<p>b)We provide one of a kind personalized solution to provide you with localized contact tracing, live dashboards and any other covid related information catered to your indivisual need.
+c)</p>
+<ol>
+<li>Live dashboard for covid cases in campus/state/country.(completed) \
+2)plotly Map of the campus with hotspots of covid stricken places.(completed) \</li>
+<li>Covid advisory static pages.(completed)</li>
+</ol>
+<p>d)Technology Stack : python, database(postgress), web scraping, node js, react js, HTML, CSS , JAVASCRIPT , BOOTSTRAP.</p>
+<p>e)List of deliverables:</p>
+<ol>
+<li>Live dashboard for covid cases in campus/state/country.(completed) \
+2)plotly Map of the campus with hotspots of covid stricken places.(completed) \</li>
+<li>Covid advisory static pages.(completed)</li>
+</ol>
+<p>f) general comodity usage pc that can host a web server, Python, Node js, React js, html , css and javascript.</p>
+<p>g) how to operate</p>
+<ul>
+<li><code>git clone https://github.com/CS699-IITB-Autumn-2021/project-team_thunderstruck.git</code></li>
+<li><code>cd project-team_thunderstruck</code>
+// setting up the server</li>
+<li>Install nodejs, npm, postgres, python</li>
+<li>Install the following python packages using pip: json, numpy, pandas, chart_studio, plotly-express, bs4
+{
+to install node js see below links :
+for windows: https://nodejs.org/dist/v16.13.0/node-v16.13.0-x64.msi
+for mac: https://nodejs.org/dist/v16.13.0/node-v16.13.0.pkg</li>
+</ul>
+<p>to install python:
+for windows: https://www.python.org/downloads/windows/
+for linux: https://www.python.org/downloads/source/
+for mac: https://www.python.org/downloads/macos/
+to install postgress:
+for windows: https://www.postgresql.org/download/windows/
+for linux: https://www.postgresql.org/download/linux/
+for mac: https://www.postgresql.org/download/macosx/
+}</p>
+<p>Then from the directory where git is cloned run following commands
+Setup the database:</p>
+<ul>
+<li>
+<p>Use the username password created while installing postgres and paste it in db.js in appropriate fields.</p>
+</li>
+<li>
+<p>Open psql in your command line: <br>
+<code>psql</code></p>
+</li>
+<li>
+<p>Create the coviddash database: <br>
+<code>CREATE DATABASE coviddash;</code></p>
+</li>
+<li>
+<p>Use the coviddash database: <br><code>\c coviddash username</code></p>
+</li>
+<li>
+<p>Run commands from file: <br>
+<code>\i server/sql_commands/database.sql</code> <br>
+<code>\i server/sql_commands/insert_data.sql</code></p>
+</li>
+<li>
+<p>Now our database is ready!</p>
+</li>
+<li>
+<p>See the tables that have been created: <br><code>\dt</code></p>
+</li>
+<li>
+<p>Get out of psql <br><code>\q</code></p>
+</li>
+<li>
+<p>Firing up the Server!<br>
+<code>cd server</code> <br>
+<code>npm install</code><br>
+<code>node app</code><br>
+Server running on port 8080</p>
+</li>
+<li>
+<p>Starting the client! Open a new terminal <br>
+<code>cd ../client</code> <br>
+<code>npm install</code><br>
+<code>npm start</code><br></p>
+</li>
+</ul>
+<p>Client is now running at port 3000
+Go to http://localhost:3000 to open up the client home page</p>
+<p>h)Primary stakeholders of the product/service built: any organization with a campus, which has residents or workers. eg: IT giants , schools, universities etc</p>
+<p>i)Team details along with the contribution:</p>
+<p>PARAMVEER choudhary(213050061):dash board creation(4 plots),card creation(for total cases and deaths) ,committee task force advisory page,student advisory page,(homepage)
+DIVYANK PRATAP TIWARI(213050029): heatmap generation, helped in frontend creation(signup page and homepage),campus residents advisory page,covid circulars advisory page.
+NVS ABHISHEK(213050019): database creation backend work , frontend creation(admin panel,homepage,login page)</p>
+<p>j) go to directory where repo is cloned
+cd client/src/components/Home/Home.js</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Admin.html">Admin</a></li><li><a href="CampusAdv.html">CampusAdv</a></li><li><a href="Circular.html">Circular</a></li><li><a href="Contacts.html">Contacts</a></li><li><a href="Footer.html">Footer</a></li><li><a href="Header.html">Header</a></li><li><a href="Home.html">Home</a></li><li><a href="Login.html">Login</a></li><li><a href="Signup.html">Signup</a></li><li><a href="StudentAdv.html">StudentAdv</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AdminSignupRoute">AdminSignupRoute</a></li><li><a href="global.html#CovidCasesPlotsGenerationScript">Covid Cases Plots Generation Script</a></li><li><a href="global.html#FetchPatientsRecords">FetchPatientsRecords</a></li><li><a href="global.html#HeatMapGenerationScript">HeatMap Generation Script</a></li><li><a href="global.html#LoginRoute">LoginRoute</a></li><li><a href="global.html#PatientSignupRoute">PatientSignupRoute</a></li><li><a href="global.html#PatientUpdateRoute">PatientUpdateRoute</a></li><li><a href="global.html#UpdateCovidPlotsRoute">UpdateCovidPlotsRoute</a></li><li><a href="global.html#UpdateHotSpotRoute">UpdateHotSpotRoute</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Fri Oct 29 2021 23:23:08 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

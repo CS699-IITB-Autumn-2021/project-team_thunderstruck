@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: client/src/components/StudentAdv/StudentAdv.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: client/src/components/StudentAdv/StudentAdv.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react';
+
+import '../../form.css';
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Figure from 'react-bootstrap/Figure';
+import Col from 'react-bootstrap/Col';
+import Accordion from 'react-bootstrap/Accordion';
+import Table from 'react-bootstrap/Table';
+
+import advice from './advice.png';
+import reopen from './reopen.png';
+
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
+
+export default
+/**
+* Component for showing generating the html for admin page.
+*
+* @component
+* @example
+* return (
+*   &lt;Admin/>
+* )
+*/ function StudentAdv() {
+    return (
+        /* Reference for fluid container https://react-bootstrap.github.io/layout/grid/ */
+        &lt;Container fluid>
+            &lt;Row>
+                &lt;Header />
+            &lt;/Row>
+
+            &lt;Row style={{"margin-top": "100px", "margin-bottom": "100px"}}>
+                &lt;Container fluid>
+                &lt;Row  style={{"margin-left": "5%", "margin-right": "5%"}}>
+                    &lt;h3>Student Covid Advisory&lt;/h3>
+                    &lt;p>The institute and student functionaries are seeking to minimise the damage caused to academics and careers of registered students of IIT Bombay due to Covid-19. This page has all that you need to know about the current situation on the campus.&lt;/p>
+                &lt;/Row>
+                &lt;Row  style={{"margin": "0 5% 5% 5%"}}>
+                {/* Reference : https://www.w3schools.com/css/css_margin.asp
+                https://www.w3schools.com/css/css_font_size.asp */}
+                &lt;Accordion defaultActiveKey="0">
+                &lt;Accordion.Item eventKey="1">
+                    
+                    &lt;Accordion.Header>    New rules amid covid-19 Pandemic on campus:&lt;/Accordion.Header>
+                    &lt;Accordion.Body>
+                    &lt;p>
+                    The pandemic has forced all of us follow the rules that save not ours but lives of those around us. Below  
+                    &lt;ol>
+                        &lt;li>
+                            Within the campus, please follow the below mentioned covid-19 rules to keep yourself and others safe.
+                            &lt;ol type="i">
+                                &lt;li>
+                                    Masks must be worn in public at all times. If the flying squad finds you without the mask, a fine of INR 1000 will be imposed.
+                                    &lt;/li>
+                                    &lt;li>
+                                    At least 6 feet of space must be maintained between people at all times (in offices, labs etc). 
+                                    &lt;/li>
+                                    &lt;li>
+                                    Do not gather in cafeterias or coffee rooms (they likely are not even open).
+                                    &lt;/li>
+                                    &lt;li>
+                                    Meetings should be conducted by VC unless absolutely essential. If in-person meetings have to be conducted, then large rooms with good ventilation (no AC) should be used and 6 feet of distance must be maintained. 
+                                    &lt;/li>
+                                    &lt;li>
+                                    Everyone should be mindful of hygiene, including washing hands with soap and water frequently.
+                                    &lt;/li>
+                                    &lt;li>
+                                    If you have any symptoms such as dry cough, fever, headache, report to the hospital immediately, and also inform your supervisor.
+                                    &lt;/li>
+                                    &lt;li>
+                                    Those with underlying health conditions that may put them at a higher risk due to COVID 19, should not come or be asked to come to the office or lab. 
+                                    &lt;/li>
+                                    &lt;li>
+                                    Since we expect reduced housekeeping staff in the initial period at least, people are expected to keep their surroundings as clean as possible.
+                                    &lt;/li>
+                                    &lt;li>
+                                    Avoid ordering food from outside. If you have ordered something from outside, you will have to call from the hostel landline at the main gate to provide your details after that the delivery person is allowed to come inside. After 11 pm, you will have to collect your delivery at the main gate.
+                                    &lt;/li>
+                                    &lt;li>
+                                    No visitors are allowed in the campus. 
+                                    &lt;/li>
+                                    &lt;li>
+                                    On-campus students are not allowed to go outside the campus; without prior permission from ADean/Dean SA.
+                                    &lt;/li>
+                                    &lt;li>
+                                    Inter hostel movements are restricted.
+                                    &lt;/li>
+                                    
+                            &lt;/ol>
+                        &lt;/li>
+                        &lt;li>
+                            For availing the mess facility, please follow the mess guidelines &lt;a href="https://drive.google.com/file/d/1C4tnLDK6ivJOXZV-6OTd4_DRLZKFcNyY/view?usp=sharing" target="_blank"> Click Here&lt;/a>.
+                        &lt;/li>
+                        &lt;li>
+                            To familiarize with the new campus lifestyle, &lt;a hreaf="https://docs.google.com/document/d/1Lnb7SkVjtCFXTIILsFNl-EmlVKQQ2vMeByKuCX-bJx4/edit?usp=sharing" target="_blank">click here &lt;/a>.
+                        &lt;/li>
+                        &lt;/ol>
+
+                    &lt;/p>
+                    &lt;/Accordion.Body>
+                &lt;/Accordion.Item>
+
+                &lt;Accordion.Item eventKey="2">
+                    &lt;Accordion.Header> When will the campus completely reopen?&lt;/Accordion.Header>
+                    &lt;Accordion.Body>
+                    &lt;Figure align="center">
+                        &lt;Figure.Image
+                            width="40%"
+                            alt=""
+                            src={reopen}
+                        />
+                        &lt;Figure.Caption>
+                            Welcome Back!?
+                        &lt;/Figure.Caption>
+                    &lt;/Figure>
+
+                    
+                    &lt;ul>
+                        &lt;li>
+                            The institute functionaries are closely monitoring the situation. The institute is planning the rebooting of the campus in stages.
+                        &lt;/li>
+                        &lt;li>
+                            The information about each stage will be conveyed at the beginning of each stage via individual emailing (and student notices). 
+                        &lt;/li>
+                        &lt;li>
+                            To check which batches are called back in the current phase, please &lt;a href="https://docs.google.com/document/d/13Naavv3B7cYnYP5Uar086WhOIztCOvqxZtMgiDXcwrM/edit?usp=sharing" target="_blank">click here&lt;/a>.
+                        &lt;/li>
+                    &lt;/ul>
+
+                    &lt;/Accordion.Body>
+                    &lt;/Accordion.Item>
+
+                    &lt;Accordion.Item eventKey="3">
+                    &lt;Accordion.Header>Returning to campus guidelines:
+                    &lt;/Accordion.Header>
+                    &lt;Accordion.Body>
+                    &lt;ul>
+                        &lt;li>
+                            Most students are not eligible to return to campus. If you are eligible, you should have or would receive an email with a request to fill a form. The institute authorities will process this form, and the status of your application will be sent to you by email.
+                        &lt;/li>
+                        &lt;li>
+                            In case you are permitted to return to campus, follow the procedure as shown below: &lt;br/>
+                            
+                            &lt;Figure>
+                                &lt;Figure.Image
+                                    width="60%"
+                                    alt=""
+                                    src={advice}
+                                />
+                                &lt;Figure.Caption>
+                                    Advice for returning students
+                                &lt;/Figure.Caption>
+                            &lt;/Figure>
+                            
+                        &lt;/li>
+                        &lt;li>
+                            The Institute strongly recommends that all students returning to campus must buy COVID insurance (valid for at least 6 months), and will reimburse Rs. 500 upon submission of receipt of premium paid. &lt;a href="https://docs.google.com/document/d/1H97_F9eehVpBM09ByOSoYKizdlOj2LsVIsvh69Bgp38/edit?usp=sharing" target="_blanl">Click here&lt;/a> to see information about some good insurance schemes.
+                        &lt;/li>
+                        &lt;li>
+                            &lt;a href="https://www.cleartrip.com/travelsafe/" target="_blank">Click here&lt;/a> for Covid guidelines for air travelling. Please fill your origin and destination airport/city on the website and click on get information to see the advisory.
+
+                        &lt;/li>
+                    &lt;/ul>
+
+                    &lt;/Accordion.Body>
+                    &lt;/Accordion.Item>
+
+                    &lt;Accordion.Item eventKey="4">
+                    &lt;Accordion.Header> I am feeling anxious, what should I do?&lt;/Accordion.Header>
+                    &lt;Accordion.Body>
+                    &lt;p>
+                    We suggest you approach the Student Wellness Centre counsellor, Ms Anjali Gadgeel on 9920289195 from 11 am to 1 pm and 4 pm to 6 pm or drop an email at wellness@iitb.ac.in
+                    &lt;/p>
+
+                    &lt;/Accordion.Body>
+                    &lt;/Accordion.Item>
+
+                    &lt;Accordion.Item eventKey="5">
+                    &lt;Accordion.Header>    Steps to follow if you suspect that you have coronavirus or have some other medical emergency:
+                    &lt;/Accordion.Header>
+                    &lt;Accordion.Body>
+                    &lt;ul>
+                        &lt;li>
+                            If you are on campus and suspect that you have coronavirus, first don’t panic. We are all here to help you. Please follow the below guidelines:
+                            &lt;ul>
+                                &lt;li>
+                                    Any person with COVID like symptoms must report to the hospital immediately.
+                                    &lt;/li>
+                                    &lt;li>
+                                    Depending on the symptoms, the hospital will observe, admit and do a Covid 19 swab test.
+                                    &lt;/li>
+                                    &lt;li>
+                                    Once testing is recommended the person will be admitted in the hospital.
+                                    &lt;/li>
+                                    &lt;li>
+                                    Isolate the person in isolation rooms available in the hospital (15 numbers), or in Van Vihar (40 rooms for quarantine), or in Hostel 12-14 basement (100 single rooms).
+                                    &lt;/li>
+                                    &lt;li>
+                                    If the swab test comes positive, and the person has mild symptoms (fever, cold, sore throat, cough, loss of smell, body ache) he/she will be treated at the IITB hospital.
+                                    &lt;/li>
+                                    &lt;li>
+                                    If the person has moderate to severe symptoms (covid pneumonia with dropping Oxygen saturation levels, hemodynamic instability, mental confusion, continuous fever) then he/she will be transferred to tertiary care set up such as Shushrusha Hospital or any other hospital. Transfer to a particular hospital is under the purview of BMC and as per bed availability.
+                                    &lt;/li>
+                                    &lt;li>
+                                    As per BMC guidelines on Discharge of mild cases - 10 days from symptom onset and 3 days without fever. Following discharge, the person will be sent to institutional quarantine for 7 days.
+                                    &lt;/li>
+                                    &lt;li>
+                                    Guidelines issued by BMC are updated from time to time and will be incorporated in the hospital protocol.
+                                    &lt;/li>
+                                    
+                            &lt;/ul>
+                        &lt;/li>
+                        &lt;li>
+                            For the following reasons please use telemedicine facility, to avail the facility dial 022 45811236 from mobile with What’s App facility and to see guidelines &lt;a href="https://drive.google.com/file/d/1y0lp32wGzVf2M3OEBrOajz0n2DWqnzbB/view?usp=sharing" target="_blank">click here&lt;/a>
+                            &lt;ul>
+                                &lt;li>
+                                    Prescription of regular medicines and tests
+                                    &lt;/li>
+                                    &lt;li>
+                                    Recommendation for minor, non-urgent health issues
+                                    &lt;/li>
+                                    &lt;li>
+                                    Specialist consultation for non-urgent health issues
+                                    &lt;/li>
+                                    &lt;li>
+                                    Reference to an outside hospital, if applicable
+                                    &lt;/li>
+                                    &lt;li>
+                                    Follow up advice when required
+                                    &lt;/li>
+                            &lt;/ul>
+                        &lt;/li>
+
+                        &lt;li>
+                            To call an ambulance and for emergency health needs please call 1110 from internal phone lines.
+                            &lt;/li>
+                            &lt;li>
+                            You can contact your Hall Manager/Student Task Force (STF), in case of any emergency inside the hostel. STF team contact details - Mr Akshay Nair (H-13): 82915 85637; Ms Nisha Chikkara (H-10): 98995 54899.
+                            &lt;/li>
+                            &lt;li>
+                            In case you are admitted to the hospital and your guardians are unable to contact you then they can contact your Project In-charge/Guide to get to know about your health condition.  
+                            &lt;/li>
+                    &lt;/ul>
+
+
+                    &lt;/Accordion.Body>
+                    &lt;/Accordion.Item>
+
+                    &lt;Accordion.Item eventKey="6">
+                    &lt;Accordion.Header>Supervisors for the execution of necessary steps and measures after the occurrence of a covid infection in the hostel?&lt;/Accordion.Header>
+                    &lt;Accordion.Body>
+                    &lt;ul>
+                        &lt;li>
+                            The Student Task Force and Hall Managers will take charge of the situation. Will immediately inform Wardens, A.Dean and Dean SA. Further instructions, if required will be given by the Deans SA.
+                            &lt;/li>
+                            &lt;li>
+                            The sanitization will be done by PHO of the room, lobby, lift, staircase and mess area.
+                            &lt;/li>
+                            &lt;li>
+                            The contact tracing will be done by the Institute Contact Tracing Team and necessary isolation/quarantine steps will be taken.
+                            &lt;/li>        
+                    &lt;/ul>
+
+                    &lt;/Accordion.Body>
+                    &lt;/Accordion.Item>
+                &lt;/Accordion>
+                &lt;/Row>
+
+                &lt;Row  style={{"margin": "5%"}}>
+                &lt;Table bordered>
+                    &lt;thead>
+                        &lt;tr>
+                        &lt;th>Document&lt;/th>
+                        &lt;th>Link&lt;/th>
+                        &lt;/tr>
+                    &lt;/thead>
+                    &lt;tbody>
+                        &lt;tr style={{"background-color": "#F5D081"}}>
+                            &lt;td>SOP for Higher Education from Ministry of Health and Family Welface (8/9/2020)&lt;/td>
+                            &lt;td>&lt;a href="https://www.mohfw.gov.in/pdf/FinalSOPonSkillinstitutions&amp;PGinstitutes08092020.pdf" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>Batches called back in the current phase.&lt;/td>
+                            &lt;td>&lt;a href="https://docs.google.com/document/d/13Naavv3B7cYnYP5Uar086WhOIztCOvqxZtMgiDXcwrM/edit?usp=sharing" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color": "#F5D081"}}>
+                            &lt;td>Information about some good insurance schemes&lt;/td>
+                            &lt;td>&lt;a href="https://docs.google.com/document/d/1H97_F9eehVpBM09ByOSoYKizdlOj2LsVIsvh69Bgp38/edit?usp=sharing" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>&lt;tr style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>Covid guidelines for air travelling&lt;/td>
+                            &lt;td>&lt;a href="https://www.cleartrip.com/travelsafe/" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color": "#F5D081"}}>
+                            &lt;td>COVID-19 rules&lt;/td>
+                            &lt;td>&lt;a href="https://docs.google.com/document/d/1IohoMobaioTs2lpzWNy-3Ge1tUDLKtIAvv_l6OOj5go/edit?usp=sharing" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color": "#FBBDBD"}}>
+                            &lt;td>Mess guidelines&lt;/td>
+                            &lt;td>&lt;a href="https://drive.google.com/file/d/1C4tnLDK6ivJOXZV-6OTd4_DRLZKFcNyY/view?usp=sharing" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                        &lt;tr style={{"background-color": "#F5D081"}}>
+                            &lt;td>Telemedicine facility&lt;/td>
+                            &lt;td>&lt;a href="https://drive.google.com/file/d/1y0lp32wGzVf2M3OEBrOajz0n2DWqnzbB/view?usp=sharing" target="_blank"> Click here&lt;/a>&lt;/td>
+                        &lt;/tr>
+                    &lt;/tbody>
+                &lt;/Table>
+                &lt;/Row>
+                &lt;/Container>
+            &lt;/Row>
+
+
+
+            &lt;Row>
+                &lt;Footer />
+            &lt;/Row>
+        &lt;/Container>
+    )
+}</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Admin.html">Admin</a></li><li><a href="CampusAdv.html">CampusAdv</a></li><li><a href="Circular.html">Circular</a></li><li><a href="Contacts.html">Contacts</a></li><li><a href="Footer.html">Footer</a></li><li><a href="Header.html">Header</a></li><li><a href="Home.html">Home</a></li><li><a href="Login.html">Login</a></li><li><a href="Signup.html">Signup</a></li><li><a href="StudentAdv.html">StudentAdv</a></li></ul><h3>Global</h3><ul><li><a href="global.html#AdminSignupRoute">AdminSignupRoute</a></li><li><a href="global.html#CovidCasesPlotsGenerationScript">Covid Cases Plots Generation Script</a></li><li><a href="global.html#FetchPatientsRecords">FetchPatientsRecords</a></li><li><a href="global.html#HeatMapGenerationScript">HeatMap Generation Script</a></li><li><a href="global.html#LoginRoute">LoginRoute</a></li><li><a href="global.html#PatientSignupRoute">PatientSignupRoute</a></li><li><a href="global.html#PatientUpdateRoute">PatientUpdateRoute</a></li><li><a href="global.html#UpdateCovidPlotsRoute">UpdateCovidPlotsRoute</a></li><li><a href="global.html#UpdateHotSpotRoute">UpdateHotSpotRoute</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Fri Oct 29 2021 23:23:08 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
